@@ -98,7 +98,7 @@ class StravaService(ServiceBase):
         params = {'scope':'activity:write,activity:read_all',
                   'client_id':STRAVA_CLIENT_ID,
                   'response_type':'code',
-                  'redirect_uri':WEB_ROOT + reverse("oauth_return", kwargs={"service": "strava"}),
+                  'redirect_uri':"https://tapiriik.sd2.me" + reverse("oauth_return", kwargs={"service": "strava"}),
                   "approval_prompt": "auto"
         }
         self.UserAuthorizationURL = \
